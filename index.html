@@ -28,6 +28,9 @@
             <!-- ------------------ Carrossel ----------------------------------------->
             <!-- Slider main container -->
             <div class="swiper">
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -35,16 +38,7 @@
                     <div class="swiper-slide"><img src="assets/icon_familia.png"></div>
                     <div class="swiper-slide"><img src="assets/icon_trabalhista.png"></div>
                     ...
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
+                </div>                
             </div>
         </section>
     </main>
@@ -54,7 +48,7 @@
     <!-- script do carrossel-->
     <script>
         const swiper = new Swiper('.swiper', {
-            spaceBetween: 100, //espaço entre cada slide (imagem)
+            spaceBetween: 5, //espaço entre cada slide (imagem)
             slidesPerView: 1, //imagens por visualização
             pagination: {
                 el: '.swiper-pagination',
