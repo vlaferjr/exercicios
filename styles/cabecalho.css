@@ -1,0 +1,121 @@
+.cabecalho__menu-hamburguer {
+  width: 24px; /*largura do menu*/
+  height: 24px; /*altura do menu*/
+  background-image: url(../assets/Menu.svg); /*imagem de fundo do menu*/
+  display: inline-block; /*permite mexer no tamanho*/
+  background-repeat: no-repeat; /*não repetir o menu*/
+  background-position: center; /*centralizar o menu na vertical*/
+}
+
+.cabecalho {
+  /* alteração do cabeçalho*/
+  background-color: var(--branco); /*variável vinda do style.css*/
+  display: flex; /*permite fazer a separação dos componentes*/
+  justify-content: space-between; /*separa o 2 containers do cabeçalho*/
+  align-items: center;
+  position: relative; /*libera para colocar rigth, left, top ....*/
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 1%;
+}
+
+.container_imagem {
+  padding: 1em; /*espaçamento entre as imagens*/
+}
+/*estilizando o menu*/
+.lista-menu {
+  /*desaparece eqto não é clicado*/
+  display: none;
+  position: absolute; /*movimenta elemento de acordo com elemento pai*/
+  top: 100%; /*usa 100% do cabeçalho, jogando para baixo*/
+  width: 60vw; /*aumenta largura do menu*/
+}
+/*ao clicar no input, lista menu assume display block*/
+.container__botao:checked ~ .lista-menu {
+  display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+  padding: 1em; /*espaçamento entre os itens*/
+  background-color: var(--branco); /*fundo branco dos itens*/
+}
+
+.lista-menu__titulo {
+  color: var(--laranja);
+  font-weight: 700;
+}
+
+.lista-menu__link {
+  background: var(--azul-degrade); /*background aplicada no texto*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /*usa o background somente no texto*/
+  text-transform: uppercase; /*deixar em maiúscula*/
+}
+
+.container__botao {
+  display: none;
+}
+
+.container__titulo {
+  display: none; /*não aparece normalmente (abaixo de 1024px)*/
+}
+
+.container__logo {
+  display: none; /*não aparece normalmente (abaixo de 1024px)*/
+}
+
+.lista-menu__areas {
+  display: none; /*não aparece normalmente (abaixo de 1024px)*/
+}
+
+.opcoes__botao {
+  display: none; /*não aparece normalmente (abaixo de 1024px)*/
+}
+
+@media screen and (min-width: 1024px) {
+  .cabecalho__menu-hamburguer {
+    display: none; /*esconde o menu hamburguer acima de 1024px*/
+  }
+
+  .lista-menu {
+    .lista-menu__titulo {
+      display: none; /*esconde o título do menu acima de 1024px*/
+    }
+    display: flex; /*mostra o menu normalmente acima de 1024px*/
+    position: static; /*remove a posição absoluta*/
+    width: auto; /*largura automática*/
+    flex-direction: row; /*itens lado a lado*/
+  }
+
+  .container__logo {
+    display: block; /*mostra o logo acima de 1024px*/
+    width: 40em; /*largura do logo*/
+    text-align: end; /*alinha o logo à direita*/
+  }
+
+  .container_imagem {
+    display: none; /*esconde as imagens do cabeçalho acima de 1024px*/
+  }
+
+  .opcoes__botao:checked ~ .lista-menu__areas {
+    display: block; /*mostra o menu ao clicar no botão de opções*/
+  }
+
+  .lista-menu__areas {
+    display: none;
+    background-color: white;
+    width: 20vw;
+    top: 6vw; /*posição do menu de áreas*/
+    left: 12em;
+    position: absolute;
+  }
+
+  .lista-menu__areas__item{
+    margin-bottom: 2em;
+  }
+}

@@ -91,3 +91,24 @@ img{
     font-weight: 700;
     text-decoration: none;
 }
+
+/*------- Configs para acima de 1024px ----------------*/
+
+@media screen and (min-width: 1024px) {
+    .carrossel__titulo{
+        font-size: 26px; /*tamanho do título maior em telas maiores*/
+    }
+
+    .swiper-pagination{
+        margin: 2em 0 3em 0; /*margem para cima e para baixo*/
+    }
+    .swiper{
+        width: 80%; /*largura do carrossel*/
+    }
+
+    .card{
+        width: 40%; /*largura do card*/
+        margin: 0 auto; /*centralizar o card*/
+    }
+
+}

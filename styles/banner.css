@@ -1,0 +1,53 @@
+.banner{
+    background: var(--azul-degrade); /*fundo*/
+    color: var(--branco); /*cor da fonte*/
+    text-align: center; /*alinhar tudo centralizado*/
+    padding: 2.5em 2em; /*espaçamento em cima e dos lados*/
+}
+
+.banner__titulo{
+    font-size: 18px; 
+    font-weight: 700; /*deixar fonte mais "encorpada"*/
+}
+
+.banner__texto{
+    font-weight: 500; /*deixar fonte mais "encorpada"*/
+    margin: 1em 0; /*espaçamento entre o texto e o título*/
+}
+
+.banner__pesquisa{
+    background-color: transparent; /*fundo do input*/
+    border: 1px solid var(--branco); /*borda branca com linha*/
+    color: var(--branco); /*cor da fonte*/
+    border-radius: 24px; /*arredondamento da borda*/
+    padding: 0.5em 1em; /*espaçamento dentro do input*/
+    width: 90%; /*largura 100% do que pode ocupar*/
+}
+
+.banner__pesquisa::placeholder{ /*acessar o placeholder do inpput*/
+    font-family: var(--fonte-principal); /*tipo da fonte*/
+    font-size: 16px; /*tamanho da fonte*/
+    font-weight: 400; /*negrito da fonte*/
+    color: var(--branco); /*cor da fonte*/
+    text-align: center; /*alinhamento da fonte*/
+    background: url(/imagens/Lupa.svg) no-repeat; /*inserir a imagem de fundo da lupa sem repetir*/
+    background-position: 1em; /*posição da imagem de fundo*/
+}
+
+/*------- Configs para acima de 1024px ----------------*/
+
+@media screen and (min-width: 1024px) {
+    .banner__titulo{
+        font-size: 36px; /*tamanho do título maior em telas maiores*/
+        font-weight: 700; /*deixar fonte mais "encorpada"*/
+    }
+
+    .banner__pesquisa{
+        width: 50%; /*input ocupa metade da tela em telas maiores*/
+    }
+
+    .banner__pesquisa::placeholder{
+        background-position: 6em; /*posição da imagem de fundo*/
+    }
+    
+}

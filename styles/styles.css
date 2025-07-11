@@ -1,3 +1,5 @@
+@import url(cabecalho.css);
+@import url(banner.css);
 @import url(carrossel.css);
 @import url(topicos.css);
 @import url(contato.css);

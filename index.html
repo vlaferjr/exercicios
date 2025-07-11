@@ -18,10 +18,73 @@
 </head>
 
 <body>
+    <!--cabeçalho da página-->
     <header class="cabecalho">
-        <h1>Exercícios - MobileFirst</h1>
+        <div class="container">
+            <!--ao clicar no ícone do menu, estamos selecionando o checkbox-->
+            <input type="checkbox" id="menu" class="container__botao">
+            <!--Associa o span aos elementos que tem o id menu-->
+            <label for="menu">
+                <!--é span pq não será simples imagem,
+            já que o menu hamburguer vai mudar quando aberto-->
+                <span class="cabecalho__menu-hamburguer  container_imagem"></span>
+            </label>
+            <!--lista com os itens do menu-->
+            <ul class="lista-menu">
+                <!--itens da lista-->
+                <li class="lista-menu__titulo">Categorias</li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Home</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Sobre</a>
+                </li>
+                <input type="checkbox" id="opcoes_menu__areas" class="opcoes__botao">
+                <label for="opcoes_menu__areas" class="opcoes__titulo">
+                    <li class="lista-menu__item"><a class="lista-menu__link">Áreas de Atuação</a></li>
+                </label>
+                <ul class="lista-menu__areas">
+                    <li class="lista-menu__areas__item"><a href="#" class="lista-menu__link">Direito Penal</a></li>
+                    <li class="lista-menu__areas__item"><a href="#" class="lista-menu__link">Direito Civil</a></li>
+                    <li class="lista-menu__areas__item"><a href="#" class="lista-menu__link">Direito Trabalhista</a>
+                    </li>
+                    <li class="lista-menu__areas__item"><a href="#" class="lista-menu__link">Direito Tributário</a></li>
+                    <li class="lista-menu__areas__item"><a href="#" class="lista-menu__link">Direito Previdenciário</a>
+                    </li>
+                </ul>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Contato</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Acima de 1024px-->
+        <div class="container container__logo">
+            <a href="#"><img src="assets/logo_pope1_gold_metallic.png" alt="Logo Vanessa"></a>
+        </div>
+        <!-------------------->
+
+        <div class="container">
+            <!--imagem com link-->
+            <a href="#"><img src="assets/Favoritos.svg" alt="Meus favoritos"
+                    class="container_imagem container_imagem_transparente"></a>
+            <!--imagem com link-->
+            <a href="#"><img src="assets/Compras.svg" alt="carrinho de compras" class="container_imagem"></a>
+            <!--imagem com link-->
+            <a href="#"><img src="assets/Email.svg" alt="Meu perfil" class="container_imagem"></a>
+        </div>
+
     </header>
+
     <main>
+        <!--banner-->
+        <section class="banner">
+            <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+            <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
+            <!--campo para busca-->
+            <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+        </section>
+
         <section class="carrossel">
             <h2 class="carrossel__titulo">Novos Lançamentos</h2>
 
@@ -61,16 +124,17 @@
                 <!--1ª coluna-->
                 <div class="card__botoes">
                     <ul class="lista__botoes">
-                        <li class="lista__item"><a href="#"><img src="assets/Favoritos.svg" alt="Favoritar o livro"></li>
+                        <li class="lista__item"><a href="#"><img src="assets/Favoritos.svg" alt="Favoritar o livro">
+                        </li>
                         <li class="lista__item"><a href="#"><img src="assets/Compras.svg" alt="Comprar o livro"></li>
                     </ul>
 
-                     <a href="#" class="card__saibamais" alt="Saiba mais">Saiba mais</a>
+                    <a href="#" class="card__saibamais" alt="Saiba mais">Saiba mais</a>
                 </div>
             </div>
         </section>
         <!-- --------------------------tópicos ------------------------>
-         <section class="topicos">
+        <section class="topicos">
             <h2 class="topicos__titulo">Tópicos visitados</h2>
             <ul class="topicos__lista">
                 <li class="topicos__item">Direito Penal</li>
@@ -81,18 +145,43 @@
                 <li class="topicos__item">Direito Consumidor</li>
                 <li class="topicos__item">Direito Imobiliário</li>
             </ul>
-         </section>
-         <!-- ------------------------Contato --------------------------->
-          <section class="contato">
-            <h2 class="contato__titulo">Fique por dentro das novidades</h2>
-            <p class="contato__texto">Atualização de ebooks, novos livros, promoções e outros</p>
+        </section>
+        <!-- ------------------------Contato --------------------------->
+        <section class="contato">
+            <div class="contato__descricao">
+                <h2 class="contato__titulo">Fique por dentro das novidades</h2>
+                <p class="contato__texto">Atualização de ebooks, novos livros, promoções e outros</p>
+            </div>
             <input type="email" placeholder="Cadastre seu e-mail" class="contato__email">
-          </section>
-          <!-- -----------------------Rodapé --------------------------->
-           <footer class="rodape">
+        </section>
+        <!-- -----------------------Rodapé --------------------------->
+        <footer class="rodape">
             <hr>
             <h2 class="rodape__titulo">Grupo Alura</h2>
-           </footer>
+            <!--para visões maiores que 1024px-->
+            <ul class="rodape__lista">
+                <li class="rodape__lista__titulo">Educação</li>
+                <li class="rodape__lista__item">
+                    <a href="#" class="rodape__lista__link">FGV Direito SP (Fundação Getulio Vargas)</a>
+                </li>
+                <li class="rodape__lista__item">
+                    <a href="#" class="rodape__lista__link">USP (Universidade de São Paulo)</a>
+                </li>
+            </ul>
+
+            <ul class="rodape__lista">
+                <li class="rodape__lista__titulo">Educação Online</li>
+                <li class="rodape__lista__item">
+                    <a href="#" class="rodape__lista__link">PUC-SP (Pontifícia Universidade Católica de São Paulo)</a>
+                </li>
+                <li class="rodape__lista__item">
+                    <a href="#" class="rodape__lista__link">UFRGS (Universidade Federal do Rio Grande do Sul)</a>
+                </li>
+                <li class="rodape__lista__item">
+                    <a href="#" class="rodape__lista__link">Universidade Mackenzie</a>
+                </li>
+            </ul>
+        </footer>
 
     </main>
     <!--importação do script do carrossel-->
