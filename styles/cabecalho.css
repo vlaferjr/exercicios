@@ -77,7 +77,15 @@
   display: none; /*não aparece normalmente (abaixo de 1024px)*/
 }
 
-@media screen and (min-width: 1024px) {
+.container__texto {
+    display: none
+  }
+
+  .container__imagens {
+    display: flex; /*mostra as imagens do cabeçalho*/
+  }
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
   .cabecalho__menu-hamburguer {
     display: none; /*esconde o menu hamburguer acima de 1024px*/
   }
@@ -96,6 +104,7 @@
     display: block; /*mostra o logo acima de 1024px*/
     width: 40em; /*largura do logo*/
     text-align: end; /*alinha o logo à direita*/
+    margin-left: auto; /*alinha o logo à direita*/
   }
 
   .container_imagem {
@@ -115,7 +124,89 @@
     position: absolute;
   }
 
-  .lista-menu__areas__item{
+  .lista-menu__areas__item {
     margin-bottom: 2em;
   }
+
+  .container__texto {
+    display: none
+  }
+}
+
+/*------------------------ layout para desktop -------------------*/
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 20vw; /*largura do container principal*/
+    margin: auto; /*centraliza o container*/
+  }
+
+  .cabecalho__menu-hamburguer {
+    display: none; /*esconde o menu hamburguer em telas maiores*/
+  }
+
+  .container__imagens {
+    display: flex; /*mostra as imagens do cabeçalho em telas maiores*/
+    align-items: center;
+    padding: 3%;
+    width: 20vw; /*largura do container de imagens*/
+    gap: 6em; /*espaçamento entre as imagens*/
+  }
+
+  .container__logo {
+    display: block; /*mostra o logo acima de 1024px*/
+    width: 45em; /*largura do logo*/
+    text-align: justify; /*alinha o logo ao centro*/
+    padding-left: 15em; /*espaçamento à esquerda do logo*/
+  }
+
+  .lista-menu {
+    .lista-menu__titulo {
+      display: none; /*esconde o título do menu acima de 1024px*/
+    }
+    display: flex; /*mostra o menu normalmente acima de 1024px*/
+    position: static; /*remove a posição absoluta*/
+    width: auto; /*largura automática*/
+    flex-direction: row; /*itens lado a lado*/
+  }
+
+    .opcoes__botao:checked ~ .lista-menu__areas {
+    display: block; /*mostra o menu ao clicar no botão de opções*/
+  }
+
+  .lista-menu__areas {
+    display: none;
+    background-color: white;
+    width: 20vw;
+    top: 7vw; /*posição do menu de áreas*/
+    left: 9em;
+    position: absolute;
+  }
+
+  .lista-menu__areas__item {
+    margin-bottom: 2em;
+  }
+
+  .lista-menu__item{
+    padding: 1em 0.4em 1em 0.4em; /*espaçamento entre os itens do menu*/
+  }
+
+  .container__imagem {
+    display: flex; /*mostra as imagens do cabeçalho*/
+    align-items: center; /*alinha as imagens ao centro*/
+  }
+
+  .container__texto {
+    display: block; /*mostra o texto ao lado do carrinho de compras*/
+    font-size: 1.2em; /*tamanho da fonte do texto*/
+    
+  }
+
+  .container__imagem_texto {
+    display: flex; /*mostra a imagem e o texto juntos*/
+    align-items: center; /*alinha a imagem e o texto ao centro*/
+    text-decoration: none; /*remove o sublinhado do link*/
+    color: var(--azul-degrade); /*cor do texto*/
+    width: 4em; /*largura do container de imagem e texto*/
+  }
+
 }
