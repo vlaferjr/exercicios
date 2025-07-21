@@ -51,3 +51,15 @@
     }
     
 }
+
+/*------- Configs para desktop ----------------*/
+@media screen and (min-width: 1728px) {
+    .banner__pesquisa{
+        width: 40%; /*input ocupa menos espaço em telas maiores*/
+    }
+
+   .banner {
+        padding: 6em; /*aumenta o espaçamento do banner em telas maiores*/
+    }
+   
+}

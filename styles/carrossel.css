@@ -1,114 +1,151 @@
 .carrossel {
 }
 
-.carrossel__titulo{
-    background: var(--branco);
-    color: var(--laranja);
-    text-align: center;
-    text-transform: uppercase; /*deixar fonte maiúscula*/
-    font-size: 18px;
-    font-weight: 700;
-    padding: 1em 0 0.5em 0;
+.carrossel__titulo {
+  background: var(--branco);
+  color: var(--laranja);
+  text-align: center;
+  text-transform: uppercase; /*deixar fonte maiúscula*/
+  font-size: 18px;
+  font-weight: 700;
+  padding: 1em 0 0.5em 0;
 }
 
 /*deixar as imagens corretas*/
-.swiper-slide{
-    width: 100%; /*100% da largura da imagem*/
-    text-align: center;
+.swiper-slide {
+  width: 100%; /*100% da largura da imagem*/
+  text-align: center;
 }
 
-img{
-    width: 60%; /*100% da largura da imagem*/
+img {
+  width: 60%; /*100% da largura da imagem*/
 }
 
 /*levar a paginação (bolinhas para cima)*/
-.swiper{
-    background: var(--azul-degrade);
-    .swiper-pagination {
-        position: initial; /*paginação acima das imagens*/
-        margin: 0 0;
-        background-color: var(--branco);
-    }
+.swiper {
+  background: var(--azul-degrade);
+  .swiper-pagination {
+    position: initial; /*paginação acima das imagens*/
+    margin: 0 0;
+    background-color: var(--branco);
+  }
 }
 
 /*---------------------------------------------- Card ------------------------*/
-.card{
-    background-color: var(--branco);
-    box-shadow: 0px 4px rgba(0, 0, 0, 0.25); /*sombra no card*/
-    border-radius: 10px;
-    margin: 1em; /*não deixar o card grudado nas bordas da tela*/
+.card {
+  background-color: var(--branco);
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.25); /*sombra no card*/
+  border-radius: 10px;
+  margin: 1em; /*não deixar o card grudado nas bordas da tela*/
 }
 
-.card__descricao{
-    display: flex;
-    padding: 0.5em 0.5em;
+.card__descricao {
+  display: flex;
+  padding: 0.5em 0.5em;
 }
 
-.descricao__titulo{
-    color: var(--laranja);
-    font-weight: 700; /*negrito da fonte*/
-    font-size: 20px;
+.descricao__titulo {
+  color: var(--laranja);
+  font-weight: 700; /*negrito da fonte*/
+  font-size: 20px;
 }
 
-.descricao__subtitulo{
-    color: var(--azul);
-    font-size: 18px;
-    font-weight: 700;
-    margin: 1em 0;
+.descricao__subtitulo {
+  color: var(--azul);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 1em 0;
 }
 
-.descricao__texto{
-    font-size: 14px;
-    text-align: justify;
-    padding-right: 1em;
+.descricao__texto {
+  font-size: 14px;
+  text-align: justify;
+  padding-right: 1em;
 }
 
-.descricao__imagem{
-    width: 39vw;
+.descricao__imagem {
+  width: 39vw;
 }
 
-.card__botoes{
-    display: flex;
-    padding: 0.5em 0.5em;
-    justify-content: space-between;
+.card__botoes {
+  display: flex;
+  padding: 0.5em 0.5em;
+  justify-content: space-between;
 }
 
-.lista__botoes{
-    display: flex;
-    text-align: center;
-    align-items: center;
+.lista__botoes {
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
-.lista__item{
-    width: 3em;
+.lista__item {
+  width: 3em;
 }
 
-.card__saibamais{
-    background-color: var(--laranja);
-    padding: 1em 2.2em;
-    color: var(--branco);
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
+.card__saibamais {
+  background-color: var(--laranja);
+  padding: 1em 2.2em;
+  color: var(--branco);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 /*------- Configs para acima de 1024px ----------------*/
 
 @media screen and (min-width: 1024px) {
-    .carrossel__titulo{
-        font-size: 26px; /*tamanho do título maior em telas maiores*/
-    }
+  .carrossel__titulo {
+    font-size: 26px; /*tamanho do título maior em telas maiores*/
+  }
 
-    .swiper-pagination{
-        margin: 2em 0 3em 0; /*margem para cima e para baixo*/
-    }
-    .swiper{
-        width: 80%; /*largura do carrossel*/
-    }
+  .swiper-pagination {
+    margin: 2em 0 3em 0; /*margem para cima e para baixo*/
+  }
+  .swiper {
+    width: 80%; /*largura do carrossel*/
+  }
 
-    .card{
-        width: 40%; /*largura do card*/
-        margin: 0 auto; /*centralizar o card*/
-    }
+  .card {
+    width: 40%; /*largura do card*/
+    margin: 0 auto; /*centralizar o card*/
+  }
+}
+
+/*------- Configs para desktop ----------------*/
+@media screen and (min-width: 1728px) {
+  .carrossel__container {
+    display: flex;
+    margin: 0 20vw 3em 20vw; /*margem lateral para centralizar*/ /*vw largura da tela*/
+    align-items: center;
+  }
+
+  .swiper {
+    width: 70% !important; /*largura do carrossel em telas maiores*/
+  }
+
+  .descricao__titulo{
+    font-size: 32px; /*tamanho do título maior em telas maiores*/
+  }
+
+
+  .descricao__texto {
+    font-size: 16px; /*tamanho do texto maior em telas maiores*/
+  }
+
+
+  .card {
+    width: 60% !important; /*largura do card em telas maiores*/
+    margin: 2em !important; /*espaçamento entre os cards*/
+  }
+
+
+  .descricao {
+    margin-right: 2em; /*largura da descrição em telas maiores*/
+  }
+
+  .descricao__imagem {
+  width: 10vw;
+}
 
 }
