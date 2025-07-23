@@ -51,10 +51,9 @@
 
 .lista-menu__link {
   background: var(--azul-degrade); /*background aplicada no texto*/
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text; /*usa o background somente no texto*/
   text-transform: uppercase; /*deixar em maiúscula*/
+  text-decoration: none; /*remove o sublinhado do link*/
 }
 
 .container__botao {
@@ -78,12 +77,20 @@
 }
 
 .container__texto {
-    display: none
-  }
+  display: none;
+}
 
-  .container__imagens {
-    display: flex; /*mostra as imagens do cabeçalho*/
-  }
+.container__imagens {
+  display: flex; /*mostra as imagens do cabeçalho*/
+}
+
+.container__botao:checked ~ .container__label > .cabecalho__menu-hamburguer {
+  background-image: url(../assets/MenuAberto.svg); /*imagem do menu aberto*/
+}
+
+.container__botao:checked ~ .container__label {
+  background: var(--azul-degrade); /*fundo do menu aberto*/
+}
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   .cabecalho__menu-hamburguer {
@@ -129,7 +136,12 @@
   }
 
   .container__texto {
-    display: none
+    display: none;
+  }
+
+  .opcoes__botao:checked ~ .opcoes__titulo > .lista-menu__item {
+      background: var(--azul-degrade); /*fundo degradê dos itens do menu*/
+      -webkit-text-fill-color: var(--branco); /*cor do texto dos itens do menu*/
   }
 }
 
@@ -169,7 +181,7 @@
     flex-direction: row; /*itens lado a lado*/
   }
 
-    .opcoes__botao:checked ~ .lista-menu__areas {
+  .opcoes__botao:checked ~ .lista-menu__areas {
     display: block; /*mostra o menu ao clicar no botão de opções*/
   }
 
@@ -186,7 +198,7 @@
     margin-bottom: 2em;
   }
 
-  .lista-menu__item{
+  .lista-menu__item {
     padding: 1em 0.4em 1em 0.4em; /*espaçamento entre os itens do menu*/
   }
 
@@ -198,7 +210,6 @@
   .container__texto {
     display: block; /*mostra o texto ao lado do carrinho de compras*/
     font-size: 1.2em; /*tamanho da fonte do texto*/
-    
   }
 
   .container__imagem_texto {
@@ -208,5 +219,4 @@
     color: var(--azul-degrade); /*cor do texto*/
     width: 4em; /*largura do container de imagem e texto*/
   }
-
 }
